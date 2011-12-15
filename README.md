@@ -7,6 +7,7 @@ This package is inspired by the R package [**lubridate**](https://github.com/had
 ## Installation ##
 
 This package can be installed from github using the `devtools` package.
+
 ```r
 require(devtools)
 install_github("intellidate", "ramnathv")
