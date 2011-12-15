@@ -16,11 +16,11 @@ guess_time_format <- function(string){
 }
 
 # Test guess_time_format
-test(guess_time_format) <- function(){
-  tf <- guess_time_format
-  checkEquals(tf("12:00 AM"), "%I:%M %p")
-  checkEquals(tf("23:59:23"), "%H:%M:%S")
-  checkEquals(tf("23:59")   , "%H:%M")
-  checkEquals(tf("23:59:59"), "%H:%M:%S")
-  checkEquals(tf("2:24 AM") , "%l:%M %p")
-}
+# test(guess_time_format) <- function(){
+#   tf <- guess_time_format
+#   checkEquals(tf("12:00 AM"), "%I:%M %p")
+#   checkEquals(tf("23:59:23"), "%H:%M:%S")
+#   checkEquals(tf("23:59")   , "%H:%M")
+#   checkEquals(tf("23:59:59"), "%H:%M:%S")
+#   checkEquals(tf("2:24 AM") , "%l:%M %p")
+# }

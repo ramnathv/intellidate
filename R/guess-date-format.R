@@ -27,20 +27,20 @@ str_to_date <- function(string, default = 'mdy'){
 #  Comparison to lubridate methods
 # 1. date elements can be separated by any non word characters alphanum, _
 # 2. automatically detects format if it is unique, else resolves it
-test(guess_date_format) <- function(){
-  tf <- guess_date_format
-  checkEquals( tf("Jan 1, 1999"), "%b %e, %Y")
-  checkEquals( tf("Jan 2001") , "%b %Y")
-  checkEquals( tf("Sunday, May 1, 2000")   , "%A, %B %e, %Y")
-	checkEquals( tf("Sun Aug 5"), "%a %b %e")
-	checkEquals( tf("12/31/99"), "%m/%d/%y")
-	checkEquals( tf('20 01 89'), "%d %m %y")
-	checkEquals( tf('1 13 89') , "%m %d %y")
-  checkEquals( tf('24/11/89'), "%d/%m/%y")
-	checkEquals( tf('00/13/10'), "%y/%d/%m" )
-  checkEquals( tf('01-01/99'), c("%m-%d/%y", "%d-%m/%y"))
-  checkEquals( tf("12/11/00"), c("%m/%d/%y", "%d/%m/%y"))
-}
+# test(guess_date_format) <- function(){
+#   tf <- guess_date_format
+#   checkEquals( tf("Jan 1, 1999"), "%b %e, %Y")
+#   checkEquals( tf("Jan 2001") , "%b %Y")
+#   checkEquals( tf("Sunday, May 1, 2000")   , "%A, %B %e, %Y")
+#   checkEquals( tf("Sun Aug 5"), "%a %b %e")
+#   checkEquals( tf("12/31/99"), "%m/%d/%y")
+#   checkEquals( tf('20 01 89'), "%d %m %y")
+#   checkEquals( tf('1 13 89') , "%m %d %y")
+#   checkEquals( tf('24/11/89'), "%d/%m/%y")
+#   checkEquals( tf('00/13/10'), "%y/%d/%m" )
+#   checkEquals( tf('01-01/99'), c("%m-%d/%y", "%d-%m/%y"))
+#   checkEquals( tf("12/11/00"), c("%m/%d/%y", "%d/%m/%y"))
+# }
 
 # @context Guesses Date Formats Correctly
 # @testfun  guess_date_format

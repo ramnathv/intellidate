@@ -17,16 +17,16 @@ stamp <- function(string, date_tm = Sys.time()){
 }
 
 # Test stamp
-test(stamp) <- function(){
-  ex = as.POSIXct("2011-10-26 13:38:48 EST")
-  checkEquals( stamp("Jan 1, 1999", ex)        , "Oct 26, 2011")
-  checkEquals( stamp("Jan 01", ex)             , "Oct 26")
-  checkEquals( stamp("Sunday, May 1, 2000", ex), "Wednesday, October 26, 2011")
-  checkEquals( stamp("Sun Aug 5", ex)          , "Wed Oct 26")
-  checkEquals( stamp("12/31/99", ex)           , "10/26/11")
-  checkEquals( stamp("DOB:12/11/00", ex)       , "DOB:10/26/11")
-  checkEquals( stamp("15 Oct at 2:30 PM", ex)  , "26 Oct at  1:38 PM")
-}
+# test(stamp) <- function(){
+#   ex = as.POSIXct("2011-10-26 13:38:48 EST")
+#   checkEquals( stamp("Jan 1, 1999", ex)        , "Oct 26, 2011")
+#   checkEquals( stamp("Jan 01", ex)             , "Oct 26")
+#   checkEquals( stamp("Sunday, May 1, 2000", ex), "Wednesday, October 26, 2011")
+#   checkEquals( stamp("Sun Aug 5", ex)          , "Wed Oct 26")
+#   checkEquals( stamp("12/31/99", ex)           , "10/26/11")
+#   checkEquals( stamp("DOB:12/11/00", ex)       , "DOB:10/26/11")
+#   checkEquals( stamp("15 Oct at 2:30 PM", ex)  , "26 Oct at  1:38 PM")
+# }
 
 # TODO:
 # 1. Handle ordinals correctly
