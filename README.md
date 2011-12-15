@@ -33,7 +33,7 @@ Converts a date string to a `Date` object.
 ```r
 str_to_date("12/14/2011")        #= 2011-12-14
 str_to_date("14/12/2011")        #= 2011-12-14
-str_to_date("11/10/1989", 'mdy') #= 2011-10-11
+str_to_date("11/10/1989", 'mdy') #= 1989-11-10
 ```
 
 ### Stamp (`stamp`) ###
@@ -46,6 +46,8 @@ Suppose you want to stamp all your graphs based on the message template "Created
 now <- Sys.time() #= "2011-12-15 08:28:58 EST"
 stamp("Created on Nov 22, 2009 at 23:00 hours", now)
 [1] "Created on Dec 15, 2011 at 08:29 hours"
+
+stamp("21 Aug 2011, 11:15pm", now)
 ```
 
 
@@ -63,4 +65,6 @@ guess_date_format('00/13/10')              #= "%y/%d/%m"
 guess_date_format("01-01/99") #= c("%m-%d/%y", "%d-%m/%y"))
 guess_date_format("12/11/00") #= c("%m/%d/%y", "%d/%m/%y"))
 ```
+### TODO ###
+
 
